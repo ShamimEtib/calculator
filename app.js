@@ -21,6 +21,10 @@ document
   } else if (oper.includes(ftr)){
     if (l_or_r === "X") {
       res = parseInt(left) * parseInt(right);
+      output.innerText = res.toString();
+      left = res.toString();
+      right = "0";
+      l_or_r = "X";
     } else {
       l_or_r = ftr;
       output.innerText = "";
@@ -45,7 +49,7 @@ document
         output.innerText = res.toString();
         left = res.toString();
         right = "0";
-        l_or_r = "";
+        l_or_r = "÷";
       }else {
         l_or_r = ftr;
         output.innerText = "";
@@ -79,7 +83,7 @@ document
     output.innerText = res.toString();
     left = res.toString();
     right = "0";
-    l_or_r = "";
+    l_or_r = "-";
   }else {
     l_or_r = ftr;
     output.innerText = "";
@@ -102,6 +106,10 @@ document
   } else if (oper.includes(ftr)){
     if (l_or_r === "+") {
       res = parseInt(left) + parseInt(right);
+      output.innerText = res.toString();
+      left = res.toString();
+      right = "0";
+      l_or_r = "+";
     } else {
       l_or_r = ftr;
       output.innerText = "";
